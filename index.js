@@ -6,7 +6,8 @@ const bodyparser = require("body-parser");
 const cors = require("cors");
 const port = process.env.PORT || 4000;
 app.use(express.json());
-const DATABASE_URL=process.env.DATABASE_URL;
+
+const DATABASE_URL = process.env.DATABASE_URL;
 mongoose.connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on("connected", () => {
     console.log("connected to database");
