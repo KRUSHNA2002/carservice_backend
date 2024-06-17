@@ -31,6 +31,7 @@ const userRoute = require("./routes/userRoute");
 // path use
 
 app.use("/api/users", userRoute);
+app.use("/api/users/adduser", userRoute);
 
 
 app.listen(port, () => {
